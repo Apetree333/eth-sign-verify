@@ -1,27 +1,25 @@
 {
-  "name": "eth-sign-verify",
-  "version": "0.0.6",
-  "description": "Sign messages and verify signatures on-chain with ethersjs",
-  "main": "index.js",
-  "scripts": {
-    "test": "node test.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Adam-Koza/eth-sign-verify.git"
-  },
-  "keywords": [
-    "ethereum",
-    "signature",
-    "sign",
-    "message",
-    "verify",
-    "ethersjs"
-  ],
-  "author": "Adam Koza",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Adam-Koza/ethsignverify/issues"
-  },
-  "homepage": "https://github.com/Adam-Koza/ethsignverify#readme"
-}
+  "name":
+  "eth-sign-verify",
+  "version":
+  "0.4",
+  "description": 
+  "Sign messages and verify signatures on-chain with ethersjs",
+  "main": 
+  "index.js",
+  "scripts": 
+  {
+    "test": "node test.js"  },
+  "repository":
+  { "type": 
+    "git , https://github.com/eth-sign-verify.git"},
+  "keywords": 
+  ["ethereum", "signature","sign",  "message","verify","ethersjs"], 
+  "author": 
+  "Alexander Petree", "Adam Koza",
+  "license":  "MIT",
+  "bugs": { "url":
+  " https://github.com/ethsignverify/ issues"},
+"homepage": 
+  "https://github.com/ethsignverify",
+  "#Readme"}
