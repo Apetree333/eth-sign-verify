@@ -1,3 +1,30 @@
+
+# This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
+# For more information see: https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages
+name: Node.js Package
+on:
+  release:
+    types: [created]
+jobs:
+  build: dependencies.npm
+     runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+        node-version: 20.x
+      - run: npm ci
+      - run: npm test
+  publish-npm: build
+  runs-on:  ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org/
+      - run: npm ci, npm publish
+ build: "npm_package_lock.json"
 # This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
 name: Node.js CI
 on:
@@ -6,7 +33,7 @@ on:
   pull_request:
     branches: [ "master" ]
 jobs:
-  build:
+  build: npm-package-lock
     runs-on: ubuntu-latest
     strategy:
       matrix:
